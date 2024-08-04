@@ -1,0 +1,6 @@
+project_id        = "your-project-id"
+region            = "us-central1"
+repository_id     = "cloud-run-repo"
+service_account_id = "cloud-run-sa"
+service_name      = "my-cloud-run-service"
+container_image   = "us-central1-docker.pkg.dev/your-project-id/cloud-run-repo/your-image:tag"
