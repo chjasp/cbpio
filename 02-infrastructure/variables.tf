@@ -8,11 +8,6 @@ variable "region" {
   type        = string
 }
 
-variable "repository_id" {
-  description = ""
-  type        = string
-}
-
 variable "service_account_id" {
   description = ""
   type        = string

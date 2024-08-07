@@ -1,4 +1,4 @@
-# CLOUD RUN
+# --- CLOUD RUN
 
 resource "google_cloud_run_v2_service" "cbpio_cr" {
   name     = var.service_name
@@ -6,21 +6,35 @@ resource "google_cloud_run_v2_service" "cbpio_cr" {
   ingress  = "INGRESS_TRAFFIC_ALL"
 
   template {
-    spec {
-      containers {
-        image = var.container_image
+
+    service_account = google_service_account.cloud_run_sa.email
+    
+    scaling {
+      max_instance_count = 2
+    }
+
+    containers {
+      image = var.container_image
+      ports {
+        container_port = 3000
       }
-      service_account_name = google_service_account.cloud_run_sa.email
+      
+      resources {
+        limits = {
+          cpu    = "1"
+          memory = "512Mi"
+        }
+      }
     }
   }
 
   traffic {
-    percent         = 100
-    latest_revision = true
+    type    = "TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST"
+    percent = 100
   }
 }
 
-# IAM
+# --- IAM
 
 resource "google_service_account" "cloud_run_sa" {
   account_id   = var.service_account_id
@@ -28,8 +42,8 @@ resource "google_service_account" "cloud_run_sa" {
 }
 
 resource "google_cloud_run_service_iam_member" "public" {
-  service  = google_cloud_run_service.cbpio_cr.name
-  location = google_cloud_run_service.cbpio_cr.location
+  service  = google_cloud_run_v2_service.cbpio_cr.name
+  location = google_cloud_run_v2_service.cbpio_cr.location
   role     = "roles/run.invoker"
   member   = "allUsers"
 }

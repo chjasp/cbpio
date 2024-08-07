@@ -1,0 +1,12 @@
+# NextJS
+01-nextjs/.next
+01-nextjs/node_modules
+01-nextjs/.env*
+01-nextjs/build
+
+# Terraform
+02-infrastructure/.terraform
+02-infrastructure/*.tfstate
+02-infrastructure/*.tfstate.*
+02-infrastructure/*.tfvars
+02-infrastructure/*.lock.hcl
