@@ -54,7 +54,7 @@ const about = {
 
 // experience data
 const experience = {
-  icon: "/assets/resume/badge.svg",
+  icon: "/assets/assessments/badge.svg",
   title: "My experience",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
@@ -94,7 +94,7 @@ const experience = {
 
 // education data
 const education = {
-  icon: "/assets/resume/cap.svg",
+  icon: "/assets/assessments/cap.svg",
   title: "My education",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
@@ -185,7 +185,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
-const Resume = () => {
+const Assessments = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -337,4 +337,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default Assessments;

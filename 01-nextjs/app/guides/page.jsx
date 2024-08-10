@@ -3,7 +3,7 @@
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 
-const services = [
+const guides = [
   {
     num: "01",
     title: "Web Development",
@@ -36,7 +36,7 @@ const services = [
 
 import { motion } from "framer-motion";
 
-const Services = () => {
+const Guides = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
@@ -48,7 +48,7 @@ const Services = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
-          {services.map((service, index) => {
+          {guides.map((service, index) => {
             return (
               <div
                 key={index}
@@ -83,4 +83,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Guides;

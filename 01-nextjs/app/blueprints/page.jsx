@@ -17,7 +17,7 @@ import {
 
 import Link from "next/link";
 import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+import BlueprintSliderBtns from "@/components/BlueprintSliderBtns";
 
 const projects = [
   {
@@ -27,7 +27,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/blueprints/thumb1.png",
     live: "",
     github: "",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+    image: "/assets/blueprints/thumb2.png",
     live: "",
     github: "",
   },
@@ -49,13 +49,13 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
+    image: "/assets/blueprints/thumb3.png",
     live: "",
     github: "",
   },
 ];
 
-const Work = () => {
+const Blueprints = () => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
@@ -160,7 +160,7 @@ const Work = () => {
                 );
               })}
               {/* slider buttons */}
-              <WorkSliderBtns
+              <BlueprintSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
@@ -172,4 +172,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Blueprints;
