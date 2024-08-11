@@ -22,10 +22,10 @@ import BlueprintSliderBtns from "@/components/BlueprintSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Asset Graph",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
+      "Monitor VPC SC asset in you organization in a Graph.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/blueprints/thumb1.png",
     live: "",
@@ -33,10 +33,10 @@ const projects = [
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Automation",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
+      "Automate knowledge work with Cloud FUnctions and Gemini.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
     image: "/assets/blueprints/thumb2.png",
     live: "",
@@ -44,10 +44,10 @@ const projects = [
   },
   {
     num: "03",
-    category: "frontend",
+    category: "Chatbot",
     title: "project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
+      "Chat with documents with Cloud Run and Gemini.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
     image: "/assets/blueprints/thumb3.png",
     live: "",

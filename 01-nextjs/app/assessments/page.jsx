@@ -19,27 +19,27 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman",
+      fieldValue: "Christoph Jasper",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+40) 321 654 678",
+      fieldValue: "(+49) 321 654 678",
     },
     {
       fieldName: "Experience",
-      fieldValue: "12+ Years",
+      fieldValue: "3+ Years",
     },
     {
       fieldName: "Skype",
-      fieldValue: "luke.01",
+      fieldValue: "c.01",
     },
     {
       fieldName: "Nationality",
-      fieldValue: "American",
+      fieldValue: "German",
     },
     {
       fieldName: "Email",
-      fieldValue: "luke.01@gmail.com",
+      fieldValue: "info@cloudblueprints.com",
     },
     {
       fieldName: "Freelance",
@@ -47,7 +47,7 @@ const about = {
     },
     {
       fieldName: "Languages",
-      fieldValue: "English, Spanish",
+      fieldValue: "English, German",
     },
   ],
 };
@@ -55,7 +55,7 @@ const about = {
 // experience data
 const experience = {
   icon: "/assets/assessments/badge.svg",
-  title: "My experience",
+  title: "GCP Service Assessments",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   items: [
@@ -95,7 +95,7 @@ const experience = {
 // education data
 const education = {
   icon: "/assets/assessments/cap.svg",
-  title: "My education",
+  title: "Assessment Methodology",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   items: [
@@ -134,7 +134,7 @@ const education = {
 
 // skills data
 const skills = {
-  title: "My skills",
+  title: "GCP Expertise",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   skillList: [
@@ -201,10 +201,10 @@ const Assessments = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience">Assessments</TabsTrigger>
+            <TabsTrigger value="education">Methodology</TabsTrigger>
+            <TabsTrigger value="skills">Expertise</TabsTrigger>
+            <TabsTrigger value="about">About</TabsTrigger>
           </TabsList>
 
           {/* content */}

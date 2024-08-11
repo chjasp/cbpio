@@ -6,30 +6,30 @@ import Link from "next/link";
 const guides = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Cloud Run Cookbook",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Comprehensive guide to deploying and managing containerized applications on Google Cloud Run. Learn best practices for scalable and efficient serverless deployments.",
     href: "",
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "VPC Service Controls Guide",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "In-depth exploration of VPC Service Controls in GCP. Discover how to define security perimeters and protect sensitive data in your cloud environment.",
     href: "",
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Private Service Connect Guide",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Master the intricacies of Private Service Connect in GCP. Learn to securely access services across VPC networks and improve your cloud network architecture.",
     href: "",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "Web Application on GCP Guide",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Step-by-step tutorial for building and deploying web applications on Google Cloud Platform. Covers App Engine, Cloud Storage, and other essential GCP services.",
     href: "",
   },
 ];

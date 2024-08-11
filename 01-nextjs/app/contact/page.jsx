@@ -20,17 +20,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+40) 321 654 876",
+    description: "(+49) 321 654 876",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "youremail@gmail.com",
+    description: "info@cloudblueprints.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Code Corner, Tech Town 13579",
+    description: "Code Corner, Tech Town 12345",
   },
 ];
 
