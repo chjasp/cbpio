@@ -13,13 +13,12 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Google Cloud Expertise</span>
+            <span className="text-xl">Serverless GCP Expertise</span>
             <h1 className="h1 mb-6">
               Welcome to <br /> <span className="text-accent">Cloud Blueprints</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-            We provide comprehensive guides, security assessments, and customizable blueprints 
-              to help you optimize and secure your GCP resources.
+            We focus on building blueprints for secure and performant serverless applications, giving you a deep understanding of the services you use and how to optimize them.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

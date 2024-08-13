@@ -25,20 +25,20 @@ const projects = [
     category: "Asset Graph",
     title: "project 1",
     description:
-      "Monitor VPC SC asset in you organization in a Graph.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/blueprints/thumb1.png",
+      "Monitor you Organization's VPC SC Assets in a Graph.",
+    stack: [{ name: "Cloud Run" }, { name: "Asset Inventory" }, { name: "BigQuery" }],
+    image: "/assets/blueprints/graph.png",
     live: "",
     github: "",
   },
   {
     num: "02",
-    category: "Automation",
+    category: "Process Automation",
     title: "project 2",
     description:
-      "Automate knowledge work with Cloud FUnctions and Gemini.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/blueprints/thumb2.png",
+      "Have Documents Automatically Updated with Gemini.",
+    stack: [{ name: "Cloud Functions" }, { name: "Firestore" }, { name: "Cloud Storage" }],
+    image: "/assets/blueprints/gemini.png",
     live: "",
     github: "",
   },
@@ -47,9 +47,9 @@ const projects = [
     category: "Chatbot",
     title: "project 3",
     description:
-      "Chat with documents with Cloud Run and Gemini.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/blueprints/thumb3.png",
+      "Chat with Documents with Cloud Run and Gemini.",
+    stack: [{ name: "Cloud Functions" }, { name: "Firestore" }, { name: "Cloud Storage" }],
+    image: "/assets/blueprints/gemini_5.png",
     live: "",
     github: "",
   },
@@ -84,7 +84,7 @@ const Blueprints = () => {
               </div>
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.category}
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>

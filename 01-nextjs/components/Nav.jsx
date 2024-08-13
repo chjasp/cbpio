@@ -20,10 +20,6 @@ const links = [
     name: "blueprints",
     path: "/blueprints",
   },
-  {
-    name: "contact",
-    path: "/contact",
-  },
 ];
 
 const Nav = () => {

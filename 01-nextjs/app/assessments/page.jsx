@@ -11,83 +11,52 @@ import {
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-// about data
-const about = {
-  title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Christoph Jasper",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+49) 321 654 678",
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "3+ Years",
-    },
-    {
-      fieldName: "Skype",
-      fieldValue: "c.01",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "German",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "info@cloudblueprints.com",
-    },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available",
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "English, German",
-    },
-  ],
-};
-
 // experience data
 const experience = {
   icon: "/assets/assessments/badge.svg",
-  title: "GCP Service Assessments",
+  title: "GCP Security Assessments",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Our comprehensive security assessments evaluate your Google Cloud Platform services against industry best practices and compliance standards.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      service: "Cloud Run",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Compliant",
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
+      service: "Cloud Functions",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Partially Compliant",
     },
     {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2020 - 2021",
+      service: "Cloud Storage",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Compliant",
     },
     {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
-      duration: "2019 - 2020",
+      service: "Compute Engine",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Compliant",
     },
     {
-      company: "Digital Agency",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
+      service: "Cloud SQL",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Partially Compliant",
     },
     {
-      company: "Software Development Firm",
-      position: "Junior Developer",
-      duration: "2017 - 2018",
+      service: "Cloud IAM",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Compliant",
+    },
+    {
+      service: "Virtual Private Cloud (VPC)",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Compliant",
+    },
+    {
+      service: "Kubernetes Engine (GKE)",
+      criteria: "NIST CSF, CIS Benchmarks, PCI DSS, HIPAA, GDPR, CCPA, ISO 27001",
+      verdict: "Partially Compliant",
     },
   ],
 };
@@ -97,46 +66,14 @@ const education = {
   icon: "/assets/assessments/cap.svg",
   title: "Assessment Methodology",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
-  items: [
-    {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
-    },
-    {
-      institution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2022",
-    },
-    {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
-    },
-    {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
-    },
-    {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
-    },
-  ],
+    "Our security assessments begin with a thorough review of each GCP service's configuration and security posture. We continuously monitor Google Cloud news and updates to ensure our assessments reflect the latest best practices and vulnerabilities. This proactive approach allows us to adapt our methodology and maintain accurate, up-to-date evaluations of your GCP environment's security.",
 };
 
 // skills data
 const skills = {
   title: "GCP Expertise",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Our team of certified Google Cloud professionals holds a deep understanding of GCP security best practices and compliance frameworks. We leverage this expertise to conduct thorough assessments, identifying potential vulnerabilities and providing tailored recommendations for improvement. With Cloud Blueprints, you're gaining access to proven expertise in securing your GCP environment.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -204,12 +141,11 @@ const Assessments = () => {
             <TabsTrigger value="experience">Assessments</TabsTrigger>
             <TabsTrigger value="education">Methodology</TabsTrigger>
             <TabsTrigger value="skills">Expertise</TabsTrigger>
-            <TabsTrigger value="about">About</TabsTrigger>
           </TabsList>
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
-            {/* experience */}
+            {/* assessment */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
@@ -224,14 +160,14 @@ const Assessments = () => {
                           key={index}
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
-                          <span className="text-accent">{item.duration}</span>
+                          <span className="text-accent">{item.verdict}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
+                            {item.service}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            <p className="text-white/60">{item.criteria}</p>
                           </div>
                         </li>
                       );
@@ -248,28 +184,6 @@ const Assessments = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.degree}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
               </div>
             </TabsContent>
 
@@ -298,32 +212,6 @@ const Assessments = () => {
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
-
-            {/* about */}
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
-                      >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
                       </li>
                     );
                   })}

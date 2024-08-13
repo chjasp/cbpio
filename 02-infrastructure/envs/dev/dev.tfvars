@@ -1,5 +1,5 @@
 project_id         = "main-dev-431619"
-region             = "europe-west3"
+region             = "europe-west4"
 service_account_id = "cbpio-web-cr-sa"
 service_name       = "cbpio-web-cr"
-container_image    = "europe-west3-docker.pkg.dev/main-dev-431619/cbpio-web/poc@sha256:d8c0aa44c78c7f55105dc4e60f18ea2557814168574f06b5259fb39b4a53b15e"
+container_image    = "europe-west3-docker.pkg.dev/main-dev-431619/cbpio-web/poc@sha256:723c7d0602bae1050ab1222a2dc792e36d6f42266686a3c34f0fcaff74a65540"
