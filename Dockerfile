@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 COPY 01-nextjs/package*.json ./
-RUN npm ci
+RUN npm i
 
 COPY 01-nextjs .
 RUN npm run build

@@ -17,45 +17,45 @@ import {
 
 import Link from "next/link";
 import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+import BlueprintSliderBtns from "@/components/BlueprintSliderBtns";
 
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Asset Graph",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      "Monitor you Organization's VPC SC Assets in a Graph.",
+    stack: [{ name: "Cloud Run" }, { name: "Asset Inventory" }, { name: "BigQuery" }],
+    image: "/assets/blueprints/graph.png",
     live: "",
     github: "",
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Process Automation",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+      "Have Documents Automatically Updated with Gemini.",
+    stack: [{ name: "Cloud Functions" }, { name: "Firestore" }, { name: "Cloud Storage" }],
+    image: "/assets/blueprints/gemini.png",
     live: "",
     github: "",
   },
   {
     num: "03",
-    category: "frontend",
+    category: "Chatbot",
     title: "project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
+      "Chat with Documents with Cloud Run and Gemini.",
+    stack: [{ name: "Cloud Functions" }, { name: "Firestore" }, { name: "Cloud Storage" }],
+    image: "/assets/blueprints/gemini_5.png",
     live: "",
     github: "",
   },
 ];
 
-const Work = () => {
+const Blueprints = () => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
@@ -84,7 +84,7 @@ const Work = () => {
               </div>
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.category}
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
@@ -160,7 +160,7 @@ const Work = () => {
                 );
               })}
               {/* slider buttons */}
-              <WorkSliderBtns
+              <BlueprintSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
               />
@@ -172,4 +172,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Blueprints;
