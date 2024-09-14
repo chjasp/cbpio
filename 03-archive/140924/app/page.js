@@ -9,8 +9,9 @@ const Home = () => {
   return (
     <section className="min-h-screen flex flex-col bg-future-image bg-cover bg-center bg-no-repeat">
       <div className="flex-grow container mx-auto flex items-center">
-        <div className="w-full max-w-4xl mx-auto">
-          <div className="text-center xl:text-left bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-lg">
+        <div className="w-full">
+          <div className="text-center xl:text-left">
+            <span className="text-xl">Serverless GCP Expertise</span>
             <h1 className="h1 mb-6">
               Welcome to <br /> <span className="text-white">Cloud Blueprints</span>
             </h1>
